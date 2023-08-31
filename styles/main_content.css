@@ -320,7 +320,7 @@ li.materials-description__item > * {
 /* Seven section starting */
 .rules__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 10px;
   text-align: center;
 }
@@ -520,6 +520,12 @@ li.materials-description__item > * {
   .item-scroll-btn {
     width: 50px;
     height: 50px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .rules__list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 

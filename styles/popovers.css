@@ -1,0 +1,86 @@
+.popovers-mask {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popover-content-wrapper {
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    width: 80vw;
+    max-width: max-content;
+    height: fit-content;
+    max-height: 80vh;
+    padding: 20px;
+    padding-top: 60px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    overflow-y: scroll;
+}
+
+.popover-content-wrapper h4 {
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+.popover-content-wrapper p {
+    margin-bottom: 1em;
+}
+
+.popover-content-wrapper > div {
+    display: grid;
+    gap: 1em;
+}
+
+.popover-content-wrapper ul {
+    list-style-type: disc;
+    margin-left: 15px;
+}
+
+.popover-content-wrapper > div p {
+    margin-bottom: 0;
+}
+
+.button-closed {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: url('../images/popover-btn-closed-bg.svg') no-repeat center center;
+    background-size: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .popover-content-wrapper > div {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .popover-content-wrapper ul {
+        order: 2;
+    }
+
+    .material_image {
+        order: 1;
+        grid-row: span 3;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .popover-content-wrapper {
+        padding-top: 0;
+        overflow-y: auto;
+    }
+}
+

@@ -89,6 +89,12 @@
   text-transform: uppercase;
 }
 
+.phone:hover {
+  box-shadow: inset 0px -4px 15px 10px rgba(0, 0, 0, 0.52);
+  background: #5088b6;
+  color: white;
+}
+
 @media screen and (max-width: 767px) {
   .navigation__wrapper {
     position: absolute;
